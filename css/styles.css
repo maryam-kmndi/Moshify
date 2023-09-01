@@ -83,7 +83,7 @@ a {
   margin-left: 10px;
 }
 
-@media screen and (min-width: 1024) {
+@media screen and (min-width: 1024px) {
   .link-arrow {
     font-size: 1.8rem;
   }
@@ -113,12 +113,41 @@ a {
   font-size: 1.6rem;
 }
 
-@media screen and (min-width: 1024) {
+@media screen and (min-width: 1024px) {
   .badge {
     font-size: 1.5rem;
   }
 
   .badge--small {
     font-size: 1.2rem;
+  }
+}
+
+/* Lists */
+
+.list {
+  color: var(--color-headings);
+  list-style: none;
+  padding-left: 0;
+}
+
+.list--inline .list__item {
+  display: inline-block;
+  margin-right: 2rem;
+}
+
+.list--tick {
+  list-style-image: url(../images/tick.svg);
+  padding-left: 3rem;
+}
+
+.list--tick .list__item {
+  margin-bottom: 1rem;
+  padding-left: 0.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .list--tick .list__item {
+    padding-left: 0;
   }
 }
