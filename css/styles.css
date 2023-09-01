@@ -59,3 +59,66 @@ p {
     font-size: 2.4rem;
   }
 }
+
+/* Links */
+
+a {
+  text-decoration: none;
+}
+
+.link-arrow {
+  color: var(--color-accent);
+  font-size: 2rem;
+  font-weight: bold;
+  margin-left: 5px;
+  text-transform: uppercase;
+}
+
+.link-arrow::after {
+  content: "-->";
+  transition: margin 0.15s;
+}
+
+.link-arrow:hover::after {
+  margin-left: 10px;
+}
+
+@media screen and (min-width: 1024) {
+  .link-arrow {
+    font-size: 1.8rem;
+  }
+}
+
+/* Badges */
+
+.badge {
+  border-radius: 20px;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 0.5rem 2rem;
+  white-space: nowrap;
+}
+
+.badge--primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.badge--secondry {
+  background: var(--color-secondary);
+  color: #fff;
+}
+
+.badge--small {
+  font-size: 1.6rem;
+}
+
+@media screen and (min-width: 1024) {
+  .badge {
+    font-size: 1.5rem;
+  }
+
+  .badge--small {
+    font-size: 1.2rem;
+  }
+}
