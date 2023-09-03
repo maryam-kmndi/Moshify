@@ -4,6 +4,7 @@
   --color-accent: #ff3400;
   --color-headings: #1b0760;
   --color-body: #918ca4;
+  --color-body-darker: #5c5577;
   --color-border: #ccc;
   --border-radius: 30px;
 }
@@ -326,15 +327,15 @@ a {
 .plan__billing-cycle {
   font-size: 2.4rem;
   font-weight: 300;
-  opacity: 0.8;
   margin-right: 1rem;
+  opacity: 0.8;
 }
 
 .plan__description {
+  display: block;
   font-size: 2rem;
   font-weight: 300;
   letter-spacing: 1px;
-  display: block;
 }
 
 .plan .list__item {
@@ -347,11 +348,11 @@ a {
 
 .plan--popular .card__header::before {
   content: url(../images/popular.svg);
-  width: 40px;
   display: inline-block;
   position: absolute;
-  top: -6px;
   right: 5%;
+  top: -6px;
+  width: 40px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -379,8 +380,8 @@ a {
 }
 
 .media__title {
-  text-transform: capitalize;
   margin-top: 0;
+  text-transform: capitalize;
 }
 
 .media__body {
@@ -389,4 +390,55 @@ a {
 
 .media__image {
   margin-top: 1rem;
+}
+
+/* Quotes */
+
+.quote {
+  color: var(--color-body-darker);
+  font-size: 3rem;
+  font-style: italic;
+  line-height: 1.3;
+}
+
+.quote__text::before {
+  content: open-quote;
+}
+
+.quote__text::after {
+  content: close-quote;
+}
+
+.quote__author {
+  font-family: "montserrat", Arial, Helvetica, sans-serif;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.quote__organization {
+  color: var(--color-headings);
+  font-size: 2rem;
+  font-style: normal;
+  opacity: 0.4;
+}
+
+.quote__line {
+  position: relative;
+  bottom: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .quote {
+    font-size: 2rem;
+  }
+
+  .quote__author {
+    font-size: 2.4rem;
+  }
+
+  .quote__organization {
+    font-size: 1.6rem;
+  }
 }
