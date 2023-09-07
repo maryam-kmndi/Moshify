@@ -17,14 +17,23 @@
 
 /* Typography */
 
+::selection {
+  background: var(--color-primary);
+  color: #fff;
+}
+
 html {
   font-size: 62.5%;
+}
+
+img {
+  width: 100%;
 }
 
 body {
   color: var(--color-body);
   font-family: inter, Arial, Helvetica, sans-serif;
-  font-size: 2.4rem;
+  font-size: 2rem;
   line-height: 1.5;
 }
 
@@ -37,7 +46,7 @@ h3 {
 }
 
 h1 {
-  font-size: 7rem;
+  font-size: 6rem;
 }
 
 h2 {
@@ -45,7 +54,9 @@ h2 {
 }
 
 h3 {
-  font-size: 3rem;
+  font-size: 2.8rem;
+  font-weight: 600;
+  line-height: 1.3;
 }
 
 p {
@@ -95,7 +106,7 @@ a {
 
 @media screen and (min-width: 1024px) {
   .link-arrow {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -147,6 +158,7 @@ a {
 }
 
 .list--tick {
+  color: var(--color-headings);
   list-style-image: url(../images/tick.svg);
   padding-left: 3rem;
 }
@@ -206,7 +218,7 @@ a {
   font-weight: 600;
   margin: 1rem 0;
   outline: 0;
-  padding: 2rem 3rem;
+  padding: 2rem 4vw;
   text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
@@ -277,12 +289,12 @@ a {
 /* Inputs */
 
 .input {
-  border: 1px solid var(--color-border);
   border-radius: var(--border-radius);
-  padding: 1.5rem 3.5rem;
-  outline: 0;
+  border: 1px solid var(--color-border);
   color: var(--color-headings);
   font-size: 2rem;
+  outline: 0;
+  padding: 1.5rem 3.5rem;
 }
 
 ::placeholder {
@@ -299,6 +311,7 @@ a {
   border: 0;
   flex-grow: 1;
   padding: 1.5rem 2rem;
+  width: 0;
 }
 
 .input-group .btn {
@@ -321,7 +334,7 @@ a {
 
 .card__header,
 .card__body {
-  padding: 2rem 3rem;
+  padding: 2rem 7%;
 }
 
 .card--primary .card__header {
@@ -356,11 +369,11 @@ a {
 }
 
 .plan__price {
-  font-size: 6rem;
+  font-size: 5rem;
 }
 
 .plan__billing-cycle {
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: 300;
   margin-right: 1rem;
   opacity: 0.8;
@@ -375,12 +388,6 @@ a {
 
 .plan .list__item {
   margin-bottom: 2rem;
-}
-
-@media screen and (min-width: 1024px) {
-  .plan--popular {
-    transform: scale(1.1);
-  }
 }
 
 .plan--popular .card__header {
@@ -405,6 +412,10 @@ a {
 }
 
 @media screen and (min-width: 1024px) {
+  .plan--popular {
+    transform: scale(1.1);
+  }
+
   .plan__name {
     font-size: 1.4rem;
   }
@@ -461,7 +472,7 @@ a {
 
 .quote__author {
   font-family: "montserrat", Arial, Helvetica, sans-serif;
-  font-size: 3rem;
+  font-size: 2rem;
   font-style: normal;
   font-weight: 500;
   margin-bottom: 0;
@@ -469,7 +480,7 @@ a {
 
 .quote__organization {
   color: var(--color-headings);
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-style: normal;
   opacity: 0.4;
 }
@@ -497,7 +508,6 @@ a {
 
 .grid {
   display: grid;
-  margin-bottom: 2rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -517,8 +527,14 @@ a {
   padding: 3rem;
 }
 
+.testimonial .quote {
+  margin: 2rem 0;
+  font-size: 110%;
+}
+
 .testimonial__image {
   position: relative;
+  margin: 0 3rem;
 }
 
 .testimonial__image > img {
@@ -532,14 +548,14 @@ a {
 }
 
 @media screen and (min-width: 768px) {
-  .testimonial .quote,
-  .testimonial .quote__author {
-    font-size: 2.4rem;
+  .testimonial__image {
+    margin: 0;
   }
 
   .testimonial .quote {
-    margin-left: 6rem;
-    margin-right: 0;
+    margin: 5rem 0 0 6rem;
+    font-size: 120%;
+    line-height: 1.5;
   }
 }
 
@@ -561,7 +577,7 @@ a {
 
 .callout__heading {
   color: #fff;
-  font-size: 4rem;
+  font-size: 3rem;
   margin-top: 0;
 }
 
@@ -621,7 +637,7 @@ a {
 /* Blocks */
 
 .block {
-  --padding-vertical: 6rem;
+  --padding-vertical: 5rem;
   padding: var(--padding-vertical) 2rem;
 }
 
@@ -647,12 +663,12 @@ a {
 
 .block--skewed-right {
   padding-bottom: calc(var(--padding-vertical) + 4rem);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 95%);
 }
 
 .block--skewed-left {
   padding-bottom: calc(var(--padding-vertical) + 4rem);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 0% 100%);
 }
 
 .container {
@@ -673,6 +689,7 @@ a {
 
 .nav__brand {
   transform: translateY(5px);
+  width: 150px;
 }
 
 .nav__list {
@@ -683,6 +700,10 @@ a {
 .nav__item {
   border-bottom: 1px solid #222;
   padding: 0.5rem 2rem;
+}
+
+.nav__item:last-of-type {
+  border-bottom: none;
 }
 
 .nav__item > a {
@@ -763,11 +784,12 @@ a {
 
 .block-domain__prices {
   align-items: center;
+  color: var(--color-headings);
   display: grid;
   font-size: 2rem;
   font-weight: 600;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 6rem);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 6rem);
   justify-items: center;
   margin: 0 auto;
   max-width: 700px;
@@ -805,10 +827,6 @@ a {
   margin: 1rem 0;
 }
 
-.features__image {
-  width: 100%;
-}
-
 @media screen and (min-width: 768px) {
   .feature:nth-of-type(even) .feature__content {
     order: 2;
@@ -816,10 +834,6 @@ a {
 }
 
 /* Showcase Block */
-
-.block-showcase__image > img {
-  width: 100%;
-}
 
 @media screen and (min-width: 768px) {
   .block-showcase .grid {
@@ -840,6 +854,7 @@ a {
 
 .footer {
   background: #232323;
+  padding-top: 10rem;
 }
 
 .footer a {
@@ -852,19 +867,20 @@ a {
 }
 
 .footer__section {
-  margin: 1.5rem;
   border-bottom: 1px solid #393939;
   padding: 2rem;
 }
 
 .footer__section .list {
   margin: 0;
-  white-space: nowrap;
+  /* white-space: nowrap; */
 }
 
 .footer__heading {
   text-transform: uppercase;
   font-weight: 600;
+  font-size: 2.5rem;
+  line-height: 1.5;
 }
 
 .footer__brand {
@@ -873,8 +889,6 @@ a {
 }
 
 .footer__brand img {
-  /* TODO: consider refactoring this and applying it to all images */
-  width: 100%;
   max-width: 230px;
 }
 
@@ -885,6 +899,10 @@ a {
 }
 
 @media screen and (min-width: 768px) {
+  .footer {
+    font-size: 1.5rem;
+  }
+
   .footer__sections {
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   }
@@ -894,13 +912,13 @@ a {
   }
 
   .footer .collapsible__content {
-    max-height: 100vh;
+    max-height: 100%;
     opacity: 1;
   }
 
   .footer__section {
     border: 0;
-    line-height: 4rem;
+    /* line-height: 4rem; */
   }
 
   .footer__heading {
@@ -909,10 +927,16 @@ a {
 
   .footer__brand {
     order: -1;
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
 
   .footer__copyright {
     font-size: 1.5rem;
   }
+}
+
+/* Sign-up Callout */
+
+.callout-signup {
+  transform: translateY(5rem);
 }
